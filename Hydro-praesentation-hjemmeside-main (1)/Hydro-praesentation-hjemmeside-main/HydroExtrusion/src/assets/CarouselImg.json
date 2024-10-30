@@ -1,0 +1,16 @@
+{
+"slides": {
+        "0": {
+            "src": "/img/Hydro-HappyMechanic.jpg",
+            "alt": "Example image 1"
+        },
+        "1":{
+            "src": "/img/Hydro-HoldingBauxite.jpg",
+            "alt": "Example image 2"
+         },
+         "2":{
+            "src": "/img/Hydro-BauxiteMineWorker.jpg",
+            "alt": "Example image 2"
+         }
+    }
+}
