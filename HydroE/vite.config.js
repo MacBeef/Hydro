@@ -1,8 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  base: "/HydroExtrusion/", // Add this line
   plugins: [react()],
+  base: "./", // This makes it work with relative paths
 });
