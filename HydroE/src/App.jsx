@@ -8,19 +8,11 @@ import VideoImage from "./Components/VideoImage.jsx";
 import Title from "./Components/Title.jsx";
 
 function App() {
-  function getImagePath(path) {
+  const getImagePath = (path) => {
     const base = import.meta.env.BASE_URL || "/";
     const cleanPath = path.startsWith("/") ? path.slice(1) : path;
-
-    // Check if the deployment is on GitHub Pages
-    if (window.location.origin.includes("github.io")) {
-      // Construct the path based on the GitHub Pages URL
-      return `${window.location.origin}/${import.meta.env.VITE_APP_REPO_NAME}/${cleanPath}`;
-    } else {
-      // Use the base URL for local development
-      return `${base}${cleanPath}`;
-    }
-  }
+    return `${base}${cleanPath}`;
+  };
   const images = [
     "/img/Hydro-BauxiteMineWorker.jpg",
     "/img/Hydro-HappyMechanic.jpg",
