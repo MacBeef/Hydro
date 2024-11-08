@@ -1,7 +1,7 @@
 {
-    "titles": {
-      "whoAreWe": "Who are we",
-      "values": "Values",
-      "production":"Production"
-    }
-  }  
+  "titles": {
+    "whoAreWe": "What is Hydro?",
+    "values": "Values",
+    "production": "Production"
+  }
+}

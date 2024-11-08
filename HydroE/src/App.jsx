@@ -8,7 +8,7 @@ import Title from "./Components/Title.jsx";
 
 function App() {
   const images = [
-    "/img/Hydro-BauxiteMidddneWorker.jpg",
+    "/img/Hydro-BauxiteMineWorker.jpg",
     "/img/Hydro-HappyMechanic.jpg",
     "/img/Hydro-HoldingBauxite.jpg",
   ];
