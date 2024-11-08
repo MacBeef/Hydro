@@ -18,16 +18,8 @@ function App() {
     "/img/Hydro-HappyMechanic.jpg",
     "/img/Hydro-HoldingBauxite.jpg",
   ];
-  const imageHeader = [
-    "Alluminiums fremtid",
-    "Bæredygtighed",
-    "Innovation og nytænkning",
-  ];
-  const imageBody = [
-    "Fremtiden for Alluminium er hos Hydro, der bygger på at bygge et nyt og smarte bæredygtigt miljø. Vi tilbyder et kvalitetsstorting",
-    "Bæredygtighed er vores passion, det er vigtigt at vi beskytter jorden",
-    "Hydro er ledende inde for innovation på alluminium produktion",
-  ];
+  const imageHeader = ["", "", ""];
+  const imageBody = ["", "", ""];
 
   const navigate1 = "titlesContent.titles.whoAreWe";
   const navigate2 = "titlesContent.titles.values";
@@ -83,24 +75,39 @@ function App() {
       -------------------------------------------------------------------------------------------*/}
 
       <Title title_ContentKey={navigate1} />
-
+      <VideoImage
+        imgOrVid="vid"
+        src={getImagePath("/video/ChangingTheAluminiumGame.mp4")}
+      />
       {/**/}
       <Section
         section_Type="sectionType1"
         section_Color="lightMode"
         header_ContentKey="productionContent.Production.header"
         body_ContentKey="productionContent.Production.body"
-        img_ContentKey={getImagePath("img/Hydro-BauxiteMineWorker.jpg")}
+        img_ContentKey={getImagePath("img/Hydro-ProductionLine.png")}
       />
 
+      <Title title_ContentKey={navigate2} />
+      {/**/}
+      <Section
+        section_Type="sectionType2"
+        section_Color="lightMode"
+        header_ContentKey="cooperationContent.Cooperation.header"
+        body_ContentKey="cooperationContent.Cooperation.body"
+        img_ContentKey={getImagePath("/img/Hydro-Coop.jpg")}
+      />
+
+      {/**/}
       <Section
         section_Type="sectionType1"
         section_Color="lightMode"
-        header_ContentKey="alluminumIndustryContent.alluminumIndustry.header"
-        body_ContentKey="alluminumIndustryContent.alluminumIndustry.body"
-        img_ContentKey={getImagePath("/img/Hydro-HappyMechanic.jpg")}
+        header_ContentKey="sustainabilityContent.Sustainability.header"
+        body_ContentKey="sustainabilityContent.Sustainability.body"
+        img_ContentKey={getImagePath("/img/Hydro-Sustainability.png")}
       />
 
+      <Title title_ContentKey={navigate3} />
       {/**/}
       <Section
         section_Type="sectionType3"
@@ -110,36 +117,13 @@ function App() {
         img_ContentKey={getImagePath("/img/Hydro-HoldingBauxite.jpg")}
       />
 
-      <VideoImage
-        imgOrVid="vid"
-        src={getImagePath("/video/ChangingTheAluminiumGame.mp4")}
-      />
-
-      {/**/}
-      <Section
-        section_Type="sectionType2"
-        section_Color="lightMode"
-        header_ContentKey="cooperationContent.Cooperation.header"
-        body_ContentKey="cooperationContent.Cooperation.body"
-        img_ContentKey={getImagePath("/img/Hydro-HappyMechanic.jpg")}
-      />
-
-      <Title title_ContentKey={navigate2} />
-
-      <VideoImage
-        imgOrVid="img"
-        src={getImagePath("/img/Hydro-BauxiteMineWorker.jpg")}
-      />
-
-      <Title title_ContentKey={navigate3} />
-
-      {/**/}
+      <VideoImage imgOrVid="img" src={getImagePath("/img/Hydro-Values.png")} />
       <Section
         section_Type="sectionType1"
         section_Color="lightMode"
-        header_ContentKey="sustainabilityContent.Sustainability.header"
-        body_ContentKey="sustainabilityContent.Sustainability.body"
-        img_ContentKey={getImagePath("/img/Hydro-HappyMechanic.jpg")}
+        header_ContentKey="alluminumIndustryContent.alluminumIndustry.header"
+        body_ContentKey="alluminumIndustryContent.alluminumIndustry.body"
+        img_ContentKey={getImagePath("/img/Hydro-Aluminum.png")}
       />
 
       {/*FOOTER SETUP GUIDE:

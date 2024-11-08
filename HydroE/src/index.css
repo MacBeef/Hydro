@@ -128,6 +128,7 @@
 .navLogo img {
     height: 6em;
     max-width: 100%;
+    margin-left: 2em;
     @media screen and (max-width: 850px) {
         height: 6em;
         padding-right: 0em;
