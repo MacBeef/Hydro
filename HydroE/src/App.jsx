@@ -1,4 +1,5 @@
 /*Her importere vi alle funktionerne vi skal bruge i app.jsx*/
+
 import NavBar from "./Components/NavBar.jsx";
 import ImageCarousel from "./Components/ImageCarousel.jsx";
 import Section from "./Components/Section.jsx";
@@ -7,6 +8,11 @@ import VideoImage from "./Components/VideoImage.jsx";
 import Title from "./Components/Title.jsx";
 
 function App() {
+  const getImagePath = (path) => {
+    const base = import.meta.env.BASE_URL || "/";
+    const cleanPath = path.startsWith("/") ? path.slice(1) : path;
+    return `${base}${cleanPath}`;
+  };
   const images = [
     "/img/Hydro-BauxiteMineWorker.jpg",
     "/img/Hydro-HappyMechanic.jpg",
@@ -84,7 +90,7 @@ function App() {
         section_Color="lightMode"
         header_ContentKey="productionContent.Production.header"
         body_ContentKey="productionContent.Production.body"
-        img_ContentKey="/img/Hydro-BauxiteMineWorker.jpg"
+        img_ContentKey={getImagePath("img/Hydro-BauxiteMineWorker.jpg")}
       />
 
       <Section
@@ -92,7 +98,7 @@ function App() {
         section_Color="lightMode"
         header_ContentKey="alluminumIndustryContent.alluminumIndustry.header"
         body_ContentKey="alluminumIndustryContent.alluminumIndustry.body"
-        img_ContentKey="/img/Hydro-HappyMechanic.jpg"
+        img_ContentKey={getImagePath("/img/Hydro-HappyMechanic.jpg")}
       />
 
       {/**/}
@@ -101,10 +107,13 @@ function App() {
         section_Color="lightMode"
         header_ContentKey="ourTeamContent.ourTeam.header"
         body_ContentKey="ourTeamContent.ourTeam.body"
-        img_ContentKey="/img/Hydro-HoldingBauxite.jpg"
+        img_ContentKey={getImagePath("/img/Hydro-HoldingBauxite.jpg")}
       />
 
-      <VideoImage imgOrVid="vid" src="/video/ChangingTheAluminiumGame.mp4" />
+      <VideoImage
+        imgOrVid="vid"
+        src={getImagePath("/video/ChangingTheAluminiumGame.mp4")}
+      />
 
       {/**/}
       <Section
@@ -112,12 +121,15 @@ function App() {
         section_Color="lightMode"
         header_ContentKey="cooperationContent.Cooperation.header"
         body_ContentKey="cooperationContent.Cooperation.body"
-        img_ContentKey="/img/Hydro-HappyMechanic.jpg"
+        img_ContentKey={getImagePath("/img/Hydro-HappyMechanic.jpg")}
       />
 
       <Title title_ContentKey={navigate2} />
 
-      <VideoImage imgOrVid="img" src="/img/Hydro-BauxiteMineWorker.jpg" />
+      <VideoImage
+        imgOrVid="img"
+        src={getImagePath("/img/Hydro-BauxiteMineWorker.jpg")}
+      />
 
       <Title title_ContentKey={navigate3} />
 
@@ -127,7 +139,7 @@ function App() {
         section_Color="lightMode"
         header_ContentKey="sustainabilityContent.Sustainability.header"
         body_ContentKey="sustainabilityContent.Sustainability.body"
-        img_ContentKey="/img/Hydro-HappyMechanic.jpg"
+        img_ContentKey={getImagePath("/img/Hydro-HappyMechanic.jpg")}
       />
 
       {/*FOOTER SETUP GUIDE:
